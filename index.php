@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +8,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="icon" type="image/png" href="assets/img/logoting2.png">
   <title>
    Achtung! Technologies
   </title>
@@ -69,25 +72,25 @@
             </a>
           </li>
           <li class="nav-item p-0">
-            <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="" target="_blank">
+            <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/achtungtech/" target="_blank">
               <i class="fab fa-facebook-square"></i>
               <p class="d-lg-none d-xl-none">Facebook</p>
             </a>
           </li>
           <li class="nav-item p-0">
-            <a class="nav-link" rel="tooltip" title="Slide into our DM" data-placement="bottom" href="https://api.whatsapp.com/send?phone=254720533799&text=Hello%20Achtung!"target="_blank">
+            <a class="nav-link" rel="tooltip" title="Slide into our DM" data-placement="bottom" href="https://wa.me/254776991560?text=Hey%20Achtung!"target="_blank">
               <i class="fab fa-whatsapp"></i>
               <p class="d-lg-none d-xl-none">Whatsapp</p>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About us</a>
+            <a class="nav-link" href="#about_us">About us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Why Us?</a>
+            <a class="nav-link" href="#why_us">Why Us?</a>
           </li>
            <li class="nav-item">
-            <a class="nav-link" href="#">Contact Us</a>
+        <a class="nav-link" href="#contact_us">Contact Us</a>
           </li>
         </ul>
       </div>
@@ -112,8 +115,8 @@
     </div>
   </div>
  
-    <section class="section section-lg">
-      <section class="section">
+    <section class="section section-lg" >
+      <section class="section" id="about_us">
         <img src="assets/img/path4.png" class="path">
         <div class="container">
           <div class="row row-grid justify-content-between">
@@ -205,7 +208,7 @@
             </div>
             <div class="col-md-6">
               <div class="pl-md-5">
-                <h1>What We Do</h1>
+                <h1 >What We Do</h1>
                   
                 <p> <b>Web Design & Development</b>I should be capable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. </p>
                 <br/>
@@ -218,7 +221,7 @@
         </div>
       </section>
     </section>
-    <section class="section section-lg">
+    <section class="section section-lg" id="why_us">
 
       <div class="container">
         <div class="row justify-content-center">
@@ -339,31 +342,44 @@
         </div>
       </div>
     </section>
-    <section class="section section-lg section-coins">
+    <section class="section section-lg section-coins" id="contact_us">
       <img src="assets/img/path3.png" class="path">
       <div class="container">
         <div class="row">
           <div class="col-md-4">
             <hr class="line-info">
             <h1>Choose the people that believe in your ideas.<br/>
-              <span class="text-info">Contact Us</span>
+              <span  class="text-info">Contact Us</span>
             </h1>
           </div>
         </div>
         <div class="row">
           <div class="col-md-8">
+            <?php
+          if(isset($_SESSION['mail'])){ ?>
+                
+                <div class="alert alert-success alert-with-icon">
+                  <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
+                    <i class="tim-icons icon-simple-remove"></i>
+                  </button>
+                  <span data-notify="icon" class="tim-icons icon-bell-55"></span>
+                  <span>
+                    <b> Well done! - </b> This is a regular notification made with ".alert-success"</span>
+          </div><?php }
+          unset($_SESSION['mail']);
+          ?>
               <form  method = "POST" action = "process/contact.php">
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
                         <label><p>Your Name</p></label>
-                        <input type="text" class="form-control" >
+                        <input type="text" name="name" class="form-control" required>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label><p>Email address</p></label>
-                        <input type="email" class="form-control">
+                        <input type="email" name="email" class="form-control" required>
                       </div>
                     </div>
                   </div>
@@ -371,7 +387,7 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label><p>Phone</p></label>
-                        <input type="text" class="form-control" >
+                        <input type="text" name="phone" class="form-control" >
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -382,11 +398,11 @@
                     <div class="col-md-12">
                       <div class="form-group">
                         <label><p>Message</p></label>
-                        <input type="text" class="form-control" placeholder="Ask for a quotation maybe?..">
+                        <input type="text" class="form-control" name="message" placeholder="Ask for a quotation maybe?.." required>
                       </div>
                     </div>
                   </div>
-                  <button type="submit" class="btn btn-primary btn-round float-right" rel="tooltip" data-original-title="Can't wait to hear from you" data-placement="right" value="1">Send</button>
+                  <button type="submit" name="submit" class="btn btn-primary btn-round float-right" rel="tooltip" data-original-title="Can't wait to hear from you" data-placement="right" value="1">Send</button>
                 </form>
 
           </div>
@@ -415,7 +431,7 @@
                        <br>info@achtung.co.ke
                    </p>
                   </div>
-                </div>
+               </div>
           </div>
         </div>
       </div>
@@ -429,29 +445,29 @@
           <div class="col-md-3">
             <ul class="nav">
               <li class="nav-item">
-                <a href="../index.html" class="nav-link">
+                <a href="#top" class="nav-link">
                   Back to top
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../examples/landing-page.html" class="nav-link">
+                <a href="#about_us" class="nav-link">
                   About us
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../examples/register-page.html" class="nav-link">
+                <a href="#why_us" class="nav-link">
                   Why us
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../examples/profile-page.html" class="nav-link">
+                <a href="#contact_us" class="nav-link">
                   Contact us
                 </a>
               </li>
             </ul>
           </div>
           <div class="col-md-3">
-           
+          
           </div>
           <div class="col-md-3">
             <h3 class="title">Follow us:</h3>
@@ -462,7 +478,7 @@
               <a target="_blank" href="https://fb.me/achtungtech" class="btn btn-icon btn-neutral btn-round btn-simple" data-toggle="tooltip" data-original-title="Like us">
                 <i class="fab fa-facebook-square"></i>
               </a>
-              <a target="_blank" href="https://api.whatsapp.com/send?phone=254720533799&text=Hello%20Achtung!" class="btn btn-icon btn-neutral  btn-round btn-simple" data-toggle="tooltip" data-original-title="Slide into our DM">
+              <a target="_blank" href="https://wa.me/254776991560?text=Hey%20Achtung!" class="btn btn-icon btn-neutral  btn-round btn-simple" data-toggle="tooltip" data-original-title="Slide into our DM">
                 <i class="fab fa-whatsapp"></i>
               </a>
             </div>
@@ -489,22 +505,6 @@
    <script src="./assets/demo/demo.js"></script> -->
    <!-- Control Center for Black UI Kit: parallax effects, scripts for the example pages etc -->
    <script src="./assets/js/blk-design-system.min.js?v=1.0.0" type="text/javascript"></script>
-
-   <script>
-    $(document).ready(function() {
-      blackKit.initDatePicker();
-      blackKit.initSliders();
-    });
-
-    function scrollToDownload() {
-
-      if ($('.section-download').length != 0) {
-        $("html, body").animate({
-          scrollTop: $('.section-download').offset().top
-        }, 1000);
-      }
-    }
-  </script>
 
 </body>
 
