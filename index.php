@@ -7,7 +7,10 @@ session_start();
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+  <meta name="description" content="A Kenyan bespoke web and software solutions provider you ought to take note of.">
+  <meta name="keywords" content="Kenya,Nairobi,Web design,web development,bespoke software,Amos Muraguri,websites kenya,web design kenya,web desin nairobi">
+  <meta name="author" content="John Doe">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/logoting2.png">
   <link rel="icon" type="image/png" href="assets/img/logoting2.png">
   <title>
    Achtung! Technologies
@@ -115,6 +118,7 @@ session_start();
     </div>
   </div>
  
+
     <section class="section section-lg" >
       <section class="section" id="about_us">
         <img src="assets/img/path4.png" class="path">
@@ -210,11 +214,14 @@ session_start();
               <div class="pl-md-5">
                 <h1 >What We Do</h1>
                   
-                <p> <b>Web Design & Development</b>I should be capable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. </p>
+                <p> <i><b>Web Design & Development:We create websites and web apps.</b></i> Websites work!.Websites generate business and deliver strong market messages 24/7/365.While,Web Applications offer solutions that offer business services and functionability that is accessible from anywhere on any device.</p>
                 <br/>
-                <p>When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray.</p>
+                <p><i><b>We offer Mobile App Development:</b></i> We design and develop mobile apps for iOS and Android platforms.</p>
                 <br/>
-                <a href="#" class="font-weight-bold text-info mt-5">Show all <i class="tim-icons icon-minimal-right text-info"></i></a>
+                <p><i><b>We offer Search Engine Optimization(SEO):</b></i> This service increases a websites searchability and visibility on engines such as Google.For an e-commerce platform well done optimization leads to a spike of new customers from web searches.</p>
+                <br/>
+                <p><i><b>Bespoke Email:</b></i> A bespoke email address based on your business comes across as a mark of professionalism to your clients.</p>
+                <a href="#contact_us" class="font-weight-bold text-info mt-5">Interested in any of these services?Contact us<i class="tim-icons icon-minimal-right text-info"></i></a>
               </div>
             </div>
           </div>
@@ -235,7 +242,7 @@ session_start();
                   </div>
                   <h4 class="info-title">Reasonable Pricing</h4>
                   <hr class="line-primary">
-                  <p>Divide details about your work into parts. Write a few lines about each one. A paragraph describing a feature will.</p>
+                  <p>We take extreme care not to shut out any businesses from their chance to grow.<br/>We strive to make sure that the pricing and the product result in a win-win situation for us both.</p>
                 </div>
               </div>
               <div class="col-lg-3">
@@ -245,7 +252,7 @@ session_start();
                   </div>
                   <h4 class="info-title">Fast Project Delivery</h4>
                   <hr class="line-warning">
-                  <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing feature will be a feature. </p>
+                  <p>We offer quick and efficient project completion and delivery without compromising on quality.</p>
                 </div>
               </div>
               <div class="col-lg-3">
@@ -255,7 +262,7 @@ session_start();
                   </div>
                   <h4 class="info-title">Dedicated Team</h4>
                   <hr class="line-success">
-                  <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing be enough.</p>
+                  <p>Our highly capable and ever motivated team is always ready to build your business and solve your problems.</p>
                 </div>
               </div>
             </div>
@@ -304,7 +311,7 @@ session_start();
             <div class="px-md-5">
               <hr class="line-success">
               <h3>Awesome features</h3>
-              <p>The design system comes with three pre-built pages to help you get started faster. You can change the text and images and you're good to go.</p>
+              <p>Here's a video on our promise to you. <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&t=0m43s">Watch.</a></p>
               <ul class="list-unstyled mt-5">
                 <li class="py-2">
                   <div class="d-flex align-items-center">
@@ -312,7 +319,7 @@ session_start();
                       <i class="tim-icons icon-vector"></i>
                     </div>
                     <div class="ml-3">
-                      <h6>Carefully crafted components</h6>
+                      <h6>Carefully crafted solutions.</h6>
                     </div>
                   </div>
                 </li>
@@ -322,7 +329,7 @@ session_start();
                       <i class="tim-icons icon-tap-02"></i>
                     </div>
                     <div class="ml-3">
-                      <h6>Amazing page examples</h6>
+                      <h6>Amazing project documentation.</h6>
                     </div>
                   </div>
                 </li>
@@ -332,7 +339,7 @@ session_start();
                       <i class="tim-icons icon-single-02"></i>
                     </div>
                     <div class="ml-3">
-                      <h6>Super friendly support team</h6>
+                      <h6>Brilliant support team.</h6>
                     </div>
                   </div>
                 </li>
@@ -492,17 +499,7 @@ session_start();
    <script src="./assets/js/core/popper.min.js" type="text/javascript"></script>
    <script src="./assets/js/core/bootstrap.min.js" type="text/javascript"></script>
    <script src="./assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-   <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
-   <script src="./assets/js/plugins/bootstrap-switch.js"></script>
-   <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-   <script src="./assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
-   <!-- Chart JS -->
-   <script src="./assets/js/plugins/chartjs.min.js"></script>
-   <!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
-   <script src="./assets/js/plugins/moment.min.js"></script>
-   <script src="./assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
-   <!-- Black Dashboard DEMO methods, don't include it in your project!
-   <script src="./assets/demo/demo.js"></script> -->
+  
    <!-- Control Center for Black UI Kit: parallax effects, scripts for the example pages etc -->
    <script src="./assets/js/blk-design-system.min.js?v=1.0.0" type="text/javascript"></script>
 
